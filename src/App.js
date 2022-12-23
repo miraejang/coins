@@ -1,4 +1,4 @@
-import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import { Link, NavLink, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/home';
 import { createGlobalStyle } from 'styled-components';

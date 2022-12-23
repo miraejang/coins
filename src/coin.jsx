@@ -68,6 +68,7 @@ const Coin = () => {
                   </Info>
                 );
               }
+              return false;
             })}
           </Contents>
         </>
