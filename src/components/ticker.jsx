@@ -48,6 +48,11 @@ const Ticker = () => {
       tickerId: ticker_id,
     },
   });
+  const toCapitalize = str =>
+    str
+      .split('_')
+      .map(e => `${e[0].toUpperCase()}${e.slice(1)}`)
+      .join(' ');
 
   return (
     <>
@@ -58,13 +63,6 @@ const Ticker = () => {
           <Img src={`https://coinicons-api.vercel.app/api/icon/${data.ticker.symbol.toLowerCase()}`} alt={ticker_id} />
           <Contents>
             {Object.keys(data.ticker).map(key => {
-              const toCapitalize = str => {
-                return str
-                  .split('_')
-                  .map(e => `${e[0].toUpperCase()}${e.slice(1)}`)
-                  .join(' ');
-              };
-
               return (
                 <Info key={key}>
                   {['rank', 'circulating_supply', 'total_supply', 'max_supply', 'beta_value', 'first_data_at', 'last_updated'].includes(key) && <h4>{toCapitalize(key)}</h4>}

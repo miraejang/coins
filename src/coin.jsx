@@ -45,6 +45,12 @@ const Coin = () => {
       coinId: coin_id,
     },
   });
+  const toCapitalize = str =>
+    str
+      .split('_')
+      .map(e => `${e[0].toUpperCase()}${e.slice(1)}`)
+      .join(' ');
+
   return (
     <>
       {loading && <Loading />}
@@ -54,23 +60,14 @@ const Coin = () => {
           <Img src={`https://coinicons-api.vercel.app/api/icon/${data.coin.symbol.toLowerCase()}`} alt={coin_id} />
           <Contents>
             {Object.keys(data.coin).map(key => {
-              const toCapitalize = str => {
-                return str
-                  .split('_')
-                  .map(e => `${e[0].toUpperCase()}${e.slice(1)}`)
-                  .join(' ');
-              };
-
-              return (
-                <Info key={key}>
-                  {['rank', 'is_new', 'is_active', 'type'].includes(key) && (
-                    <>
-                      <h4>{toCapitalize(key)}</h4>
-                      <p>{`${data.coin[key]}`}</p>
-                    </>
-                  )}
-                </Info>
-              );
+              if (['rank', 'is_new', 'is_active', 'type'].includes(key)) {
+                return (
+                  <Info key={key}>
+                    <h4>{toCapitalize(key)}</h4>
+                    <p>{`${data.coin[key]}`}</p>
+                  </Info>
+                );
+              }
             })}
           </Contents>
         </>
