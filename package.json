@@ -20,6 +20,8 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",  
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
