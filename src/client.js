@@ -1,7 +1,8 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'https://apollo-movies-app.herokuapp.com/',
+  // uri: 'https://apollo-movies-app.herokuapp.com/',
+  uri: 'http://localhost:4000/',
   cache: new InMemoryCache(),
 });
 

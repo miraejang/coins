@@ -1,7 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import React from 'react';
-import List from './components/list';
-import Loading from './components/loading';
+import List from './list';
+import Loading from './loading';
 
 const COINS = gql`
   query Coins {
