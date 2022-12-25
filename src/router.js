@@ -5,29 +5,32 @@ import Coins from './components/coins';
 import Home from './components/home';
 import Tickers from './components/tickers';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: 'tickers',
-        element: <Tickers />,
-      },
-      {
-        path: 'coins',
-        element: <Coins />,
-      },
-      {
-        path: '/coins/:coin_id',
-        element: <Coin />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: 'tickers',
+          element: <Tickers />,
+        },
+        {
+          path: 'coins',
+          element: <Coins />,
+        },
+        {
+          path: '/coins/:coin_id',
+          element: <Coin />,
+        },
+      ],
+    },
+  ],
+  { basename: '/coins' }
+);
 
 export default router;
