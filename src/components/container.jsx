@@ -3,8 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { isDarkAtom } from './atoms';
-import NavList from './components/nav_list';
+import { isDarkAtom } from '../atoms';
+import NavList from './nav_list';
 
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
