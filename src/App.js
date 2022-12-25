@@ -2,7 +2,7 @@ import { useRecoilValue } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { isDarkAtom } from './atoms';
-import Container from './container';
+import Container from './components/container';
 import { dark, light } from './theme';
 
 const GlobalStyle = createGlobalStyle`
