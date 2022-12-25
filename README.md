@@ -1,7 +1,7 @@
 # Coins
 GraphQL과 Apollo Server로 만든 서버를 이용한 앱입니다.   
    
-<a href="https://github.com/miraejang/graphql-server" target="_blank">**_Server 확인하기 ▶_**</a>   
+<a href="https://github.com/miraejang/graphql-server" target="_blank" rel="noopener noreferrer">**_Server 확인하기 ▶_**</a>   
 
 　　  
 
